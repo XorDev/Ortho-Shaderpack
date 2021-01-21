@@ -21,7 +21,7 @@ void main()
     pos = (gbufferModelViewInverse * vec4(pos,1)).xyz;
 
     float s = Scale/2.;
-    gl_Position = gbufferModelView * vec4(pos,1) / vec4(viewWidth/viewHeight*s,s,-Min-Max,1)-vec4(0,0,(Max-Min)/(Max+Min),0);;
+    gl_Position = gbufferModelView * vec4(pos,1) / vec4(viewWidth/viewHeight*s,s,-Min-Max,1)-vec4(0,0,(Max-Min)/(Max+Min),0);
     gl_FogFragCoord = length(pos);
 
     vec3 normal = gl_NormalMatrix * gl_Normal;
